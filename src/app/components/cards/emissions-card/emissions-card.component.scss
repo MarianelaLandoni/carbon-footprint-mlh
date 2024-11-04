@@ -46,7 +46,7 @@
       width: fit-content;
       display: flex;
       flex-direction: column;
-      flex: 0 0 auto;
+      flex: 1 0 auto;
       border-right: 1px solid var(--medium-text);
       padding: 0 24px;
 
@@ -93,7 +93,7 @@
 
     .card__content{
       .content__emissions {
-        padding: 0 36px;
+        padding: 0 32px;
       }
     }
   }
