@@ -1,0 +1,101 @@
+:host {
+  display: block;
+}
+
+.measure {
+  padding: 32px 24px;
+
+  .tabs {
+    display: block;
+  }
+
+  .title{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  .measure-content {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 24px;
+    padding: 24px;
+    margin-top: 24px;
+    background-repeat: no-repeat;
+    background-position: right 0% bottom 0%;
+
+    .top {
+      position: relative;
+
+      .calendar {
+        position: absolute;
+        top: 70px;
+        left: 0;
+      }
+    }
+
+
+   .section {
+      margin: 80px 0 24px;
+    }
+
+}
+}
+@media (min-width: 768px) {
+  .measure {
+    padding: 32px 24px;
+
+    .measure-content {
+      max-width: 100%;
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .measure {
+    padding: 48px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .measure-content {
+      height: 500px;
+      padding: 24px 36px;
+      background-repeat: no-repeat;
+      background-position: right 0% bottom 0%;
+
+      .top {
+        .calendar {
+          top: 0;
+          right: 0;
+          left: unset;
+        }
+      }
+
+      .section {
+        margin: 42px 0 24px;
+      }
+    }
+  }
+
+.food-background {
+  background-image: url('/assets/images/bg-food.svg');
+}
+
+.travel-background {
+  background-image: url('/assets/images/bg-suitcase.svg');
+}
+
+.technology-background {
+  background-image: url('/assets/images/bg-technology.svg');
+}
+
+.shopping-background {
+  background-image: url('/assets/images/bg-shopping.svg');
+}
+
+.home-background {
+  background-image: url('/assets/images/bg-energy.svg');
+}
+}

@@ -1,0 +1,33 @@
+<section class="measure">
+  <h1 class="title">Calcula tus emisiones de CO<sub>2</sub></h1>
+  <section class="measure-content"  [ngStyle]="{ 'background-image': getBackgroundImage() }">
+    <div class="top">
+      <p-tabMenu
+        class="tabs"
+        [scrollable]="scrollable"
+        separator="false"
+        [model]="measureSections"
+        [activeItem]="activeSection"
+        (activeItemChange)="setActiveSection($event)"
+      >
+      </p-tabMenu>
+
+      <app-calendar class="calendar"
+      [initialMonth]="monthSelected"
+      (monthChange)="onMonthChange($event)"
+    ></app-calendar>
+    </div>
+
+    @if(activeSection === measureSections![0]) {
+    <app-food-section class="section"></app-food-section>
+    } @if(activeSection === measureSections![1]) {
+    <app-travel-section class="section"></app-travel-section>
+    } @if(activeSection === measureSections![2]) {
+    <app-technology-section class="section"></app-technology-section>
+    } @if(activeSection === measureSections![3]) {
+    <app-shopping-section class="section"></app-shopping-section>
+    } @if(activeSection === measureSections![4]) {
+    <app-home-section class="section"></app-home-section>
+    }
+  </section>
+</section>
