@@ -1,0 +1,12 @@
+<section [formGroup]="monthForm">
+    <p-calendar
+      class="p-calendar"
+      formControlName="month"
+      view="month"
+      dateFormat="MM"
+      [readonlyInput]="true"
+      [iconDisplay]="'input'"
+      [showIcon]="true"
+      [style]="{ width: '140px' }"
+    ></p-calendar>
+  </section>
