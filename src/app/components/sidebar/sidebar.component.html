@@ -1,0 +1,37 @@
+<article class="sidebar" [ngClass]="{'open': isSidebarOpen}">
+  <img class="close-icon cursor-pointer" [ngClass]="{'open': isSidebarOpen}" src="/assets/icons/close-icon.svg" alt="cruz para cerrar sidebar" (click)="closeSidebar.emit()">
+  <div class="sidebar-wrapper">
+    <section class="top">
+      <img class="logo" src="assets/icons/logo-icon.svg" alt="logo de Zero Impact" />
+      <h1 class="title">ZeroImpact</h1>
+    </section>
+    <div class="content">
+      <nav>
+        <ul class="wrapper">
+          @for (page of pagesList; track $index) {
+          <li
+            class="item cursor-pointer"
+            [routerLink]="page.route"
+            routerLinkActive="active"
+          >
+            <img
+              class="icon"
+              [ngClass]="{ 'mb-4': page.route !== 'advice' }"
+              [src]="isActive(page.route) ? page.iconActive : page.icon"
+              alt=""
+            />
+            <a [routerLink]="page.route" routerLinkActive="active">
+              {{ page.name }}
+            </a>
+          </li>
+          }
+        </ul>
+      </nav>
+      <app-did-you-know-card
+        [showLink]="true"
+        [text]="adviceText"
+        image="/assets/icons/tree.svg"
+      ></app-did-you-know-card>
+    </div>
+  </div>
+</article>
