@@ -1,0 +1,35 @@
+<section class="container">
+  <app-info-box
+    class="info"
+    infoText="Introduce tu gasto mensual en euros para cada tipo de alimento."
+  ></app-info-box>
+
+  <section class="food-form">
+    <form class="form" [formGroup]="foodForm">
+      @for (food of foodOptions; track $index) {
+      <p-floatLabel>
+        <p-inputNumber
+          class="form-control"
+          mode="currency"
+          currency="EUR"
+          [inputId]="food.name"
+          [formControlName]="food.name"
+        />
+        <label for="number-input">{{ food.label }}</label>
+      </p-floatLabel>
+      }
+
+      <div class="form__bottom">
+        <p-button
+          severity="secondary"
+          label="Calcular"
+          (click)="onSubmitFood()"
+        />
+        <div class="bottom__result">
+          <h3 class="result__title">Resultado:</h3>
+          <p class="result__text">{{ foodCarbon }}{{ foodCarbonUnit }}</p>
+        </div>
+      </div>
+    </form>
+  </section>
+</section>
