@@ -1,0 +1,16 @@
+<article class="card" [ngClass]="{'no-title': !showTitle}">
+  <div class="card__content" [ngClass]="{'no-title': !showTitle}">
+    @if(showTitle){
+      <h2 class="content__title">{{ title }}</h2>
+    }
+    <p class="content__text" [ngClass]="{'no-title': !showTitle}">{{ text }}</p>
+    <div class="content__bottom">
+      @if(showLink) {
+      <a routerLink="advice" routerLinkActive="active" class="cursor-pointer"
+        >Explorar</a
+      >
+      }
+      <img class="image" [src]="image" alt="{{ image }} imagen" />
+    </div>
+  </div>
+</article>
