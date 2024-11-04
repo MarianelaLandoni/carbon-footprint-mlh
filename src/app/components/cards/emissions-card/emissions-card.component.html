@@ -1,0 +1,14 @@
+<article class="card">
+  <header class="card__header">
+    <h2 class="card__header-title">Emisiones por categoría</h2>
+    <!-- <img src="assets/icons/arrow-go-right.svg" alt="flecha ir a detalles" /> -->
+  </header>
+  <section class="card__content">
+    @for (category of categories; track $index; let last = $last, let first = $first) {
+    <div class="content__emissions">
+      <p class="emission__title">{{ category.name }}</p>
+      <p class="emission__text">{{ category.emissions }}<span> CO2e</span></p>
+    </div>
+    }
+  </section>
+</article>
