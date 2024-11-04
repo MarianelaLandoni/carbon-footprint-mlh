@@ -1,0 +1,14 @@
+<p-dropdown
+  [options]="months"
+  [(ngModel)]="selectedMonth"
+  optionLabel="name"
+  [showClear]="true"
+  placeholder="Selecciona un mes"
+>
+ <ng-template pTemplate="selectedItem">
+      <div *ngIf="selectedMonth">{{ selectedMonth?.name }}</div>
+  </ng-template>
+  <ng-template let-country pTemplate="item">
+      <div>{{ selectedMonth?.shortName }}</div>
+  </ng-template>
+</p-dropdown>
