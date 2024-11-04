@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.header {
+  padding: 16px;
+
+  .header__menu {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+}
