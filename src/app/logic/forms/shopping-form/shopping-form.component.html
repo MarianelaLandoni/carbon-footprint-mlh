@@ -1,0 +1,37 @@
+  <section>
+    <app-info-box
+    class="info"
+    infoText="Introduce tu gasto mensual en euros."
+  ></app-info-box>
+
+    <section class="shopping-form">
+      <form class="form" [formGroup]="shoppingForm">
+        @for (option of shoppingOptions; track $index) {
+          <p-floatLabel>
+            <p-inputNumber
+              class="form-control"
+              mode="currency"
+              currency="EUR"
+              [inputId]="option.name"
+              [formControlName]="option.name"
+            />
+            <label for="number-input">{{ option.label }}</label>
+          </p-floatLabel>
+          }
+
+        <div class="form__bottom">
+          <p-button
+          severity="secondary"
+          label="Calcular"
+          (click)="onSubmitShopping()"
+        />
+          @if(shoppingCarbon){
+          <div class="bottom__result">
+            <h3 class="result__title">Resultado:</h3>
+            <p class="result__text">{{ shoppingCarbon }}{{ shoppingCarbonUnit }}</p>
+          </div>
+          }
+        </div>
+      </form>
+    </section>
+  </section>
