@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  width: 250px;
+  height: 250px;
+
+  &.small {
+    width: 200px;
+    height: 200px;
+  }
+}
