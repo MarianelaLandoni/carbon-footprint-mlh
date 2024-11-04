@@ -1,0 +1,20 @@
+:host {
+  display: block;
+}
+
+.barchart-container {
+  margin-top: 32px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--lines);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: auto;
+
+  p-chart{
+    margin-top: 24px;
+  }
+}
