@@ -1,0 +1,43 @@
+<section class="dashboard">
+  <section class="top">
+    <app-total-emissions-card></app-total-emissions-card>
+    <app-emissions-card></app-emissions-card>
+  </section>
+
+  <div class="content">
+    <app-stacked-bar-graph></app-stacked-bar-graph>
+    <div class="container">
+      <div class="doughnut-container">
+        <div class="title">Top emissions</div>
+        <app-doughnut-graph
+          [labels]="emissionsLabels"
+          [backgroundColor]="emissionsBackground"
+          [data]="emissionsData"
+          cutout="82%"
+        ></app-doughnut-graph>
+      </div>
+
+      <div class="doughnut-container">
+        <div class="title">Compare</div>
+        <div class="graph">
+                  <app-doughnut-graph
+          [labels]="compareEmissionsTargetLabels"
+          [backgroundColor]="compareEmissionsTargetBackground"
+          [data]="compareEmissionsTargetData"
+          cutout="82%"
+          [isSmall]="true"
+        ></app-doughnut-graph>
+        <!-- <div class="legend">
+            @for (item of legendCompare; track $index) {
+                <div class="legend-item">
+                    <div class="color" [style.background]="item.color"></div>
+                    <div class="label">{{ item.label }}</div>
+                </div>
+            }
+        </div> -->
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</section>
