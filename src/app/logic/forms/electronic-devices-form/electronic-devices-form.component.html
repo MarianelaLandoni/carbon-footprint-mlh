@@ -1,0 +1,33 @@
+<section class="electronic">
+  <app-info-box
+    class="electronic__info"
+    infoText="Introduce la cantidad de cada tipo de dispositivo."
+  ></app-info-box>
+
+  <form class="electronic__form" [formGroup]="devicesForm">
+    @for (device of devicesOptions; track $index) {
+    <p-floatLabel>
+      <p-inputNumber
+        class="form-control"
+        [inputId]="device.name"
+        [formControlName]="device.name"
+      />
+      <label for="number-input">{{ device.label }}</label>
+    </p-floatLabel>
+    }
+
+    <div class="form__bottom">
+      <p-button
+        severity="secondary"
+        label="Calcular"
+        (click)="onSubmitDevices()"
+      />
+      @if(devicesCarbon){
+      <div class="bottom__result">
+        <h3 class="result__title">Resultado:</h3>
+        <p class="result__text">{{ devicesCarbon }}{{ devicesCarbonUnit }}</p>
+      </div>
+      }
+    </div>
+  </form>
+</section>
