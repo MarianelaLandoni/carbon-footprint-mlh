@@ -1,0 +1,37 @@
+<section class="car-form">
+  <form class="form" [formGroup]="carTravelForm">
+    <p-dropdown
+      formControlName="fuelType"
+      [options]="fuelTypes"
+      optionLabel="label"
+      optionValue="value"
+      placeholder="Tipo de combustible"
+      autoWidth="false"
+      [style]="{ width:'100%', maxWidth: '275px'}"
+    />
+
+    <p-floatLabel >
+      <p-inputNumber
+        inputId="integeronly"
+        formControlName="distance"
+        suffix=" km"
+        styleClass="inputNumber"
+      />
+      <label for="username">Distancia recorrida en km</label>
+    </p-floatLabel>
+
+    <div class="form__bottom">
+      <p-button
+        severity="secondary"
+        label="Calcular"
+        (click)="onSubmitTravel()"
+      />
+      @if(carTravel){
+      <div class="bottom__result">
+        <h3 class="result__title">Resultado:</h3>
+        <p class="result__text">{{ carTravel }}{{ carTravelUnit }}</p>
+      </div>
+      }
+    </div>
+  </form>
+</section>

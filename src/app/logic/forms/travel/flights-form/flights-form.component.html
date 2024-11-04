@@ -1,0 +1,40 @@
+<section class="flights-form">
+  <form class="form" [formGroup]="airTravelForm">
+    <section class="form__first-class">
+      <p-checkbox
+        formControlName="isFirstClass"
+        inputId="isFirstClass"
+        [value]="true"
+      />
+      <label for="isFirstClass">Primera clase</label>
+    </section>
+
+    <p-floatLabel>
+      <p-inputNumber inputId="integeronly" formControlName="passengers" />
+      <label for="username">Nº de pasajeros</label>
+    </p-floatLabel>
+
+    <p-floatLabel>
+      <p-inputNumber
+        inputId="integeronly"
+        formControlName="distance"
+        suffix=" km"
+      />
+      <label for="username">Distancia recorrida</label>
+    </p-floatLabel>
+
+    <div class="form__bottom">
+      <p-button
+        severity="secondary"
+        label="Calcular"
+        (click)="onSubmitTravel()"
+      />
+      @if(airTravel){
+      <div class="bottom__result">
+        <h3 class="result__title">Resultado:</h3>
+        <p class="result__text">{{ airTravel }}{{ airTravelUnit }}</p>
+      </div>
+      }
+    </div>
+  </form>
+</section>

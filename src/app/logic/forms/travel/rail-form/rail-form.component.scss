@@ -1,0 +1,74 @@
+:host {
+  display: block;
+}
+
+.car-form {
+  display: flex;
+  flex-direction: column;
+
+  .form {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 24px;
+    row-gap: 34px;
+    margin-top: 24px;
+
+    .form__modes {
+      .title {
+        margin-bottom: 6px;
+      }
+    }
+
+    .form__radio-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .radio-buttons{
+        display: flex;
+        gap: 6px;
+      }
+    }
+
+    .form__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .bottom__result {
+        display: flex;
+        gap: 6px;
+
+        .result__title,
+        .result__text {
+          font-size: 20px;
+          color: var(--primary);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .car-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .form {
+      margin: 32px 0;
+
+      .form__radio-buttons {
+        flex-direction: row;
+      }
+
+      .form__bottom {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
+}

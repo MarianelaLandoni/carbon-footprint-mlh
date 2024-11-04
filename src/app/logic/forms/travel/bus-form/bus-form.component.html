@@ -1,0 +1,26 @@
+<section class="bus-form">
+  <form class="form" [formGroup]="busTravelForm">
+    <p-floatLabel>
+      <p-inputNumber
+        inputId="integeronly"
+        formControlName="distance"
+        suffix=" km"
+      />
+      <label for="username">Distancia recorrida</label>
+    </p-floatLabel>
+
+    <div class="form__bottom">
+      <p-button
+        severity="secondary"
+        label="Calcular"
+        (click)="onSubmitTravel()"
+      />
+      @if(busTravel){
+      <div class="bottom__result">
+        <h3 class="result__title">Resultado:</h3>
+        <p class="result__text">{{ busTravel }}{{ busTravelUnit }}</p>
+      </div>
+      }
+    </div>
+  </form>
+</section>

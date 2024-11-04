@@ -1,0 +1,59 @@
+<section class="car-form">
+  <form class="form" [formGroup]="railTravelForm">
+    <section class="form__modes">
+      <h5 class="title">Selecciona uno de los siguientes:</h5>
+      <p-selectButton
+        [options]="railTransportOptions"
+        formControlName="transportMode"
+        optionLabel="label"
+        optionValue="value"
+      />
+    </section>
+
+    @if(isTrain){
+    <section class="form__radio-buttons">
+      @for (item of trainTypes; track $index) {
+      <div class="radio-buttons">
+        <p-radioButton
+          [inputId]="item.value"
+          [value]="item.value"
+          formControlName="trainType"
+        />
+        <label [for]="item.value" class="ml-4">
+          {{ item.label }}
+        </label>
+      </div>
+      }
+    </section>
+    }
+
+    <p-floatLabel>
+      <p-inputNumber inputId="integeronly" formControlName="passengers" />
+      <label for="username">Nº de pasajeros</label>
+    </p-floatLabel>
+
+    <p-floatLabel>
+      <p-inputNumber
+        inputId="integeronly"
+        formControlName="distance"
+        suffix=" km"
+      />
+      <label for="username">Distancia recorrida</label>
+    </p-floatLabel>
+
+
+    <div class="form__bottom">
+      <p-button
+      severity="secondary"
+      label="Calcular"
+      (click)="onSubmitTravel()"
+    />
+      @if(railTravel){
+      <div class="bottom__result">
+        <h3 class="result__title">Resultado:</h3>
+        <p class="result__text">{{ railTravel }}{{ railTravelUnit }}</p>
+      </div>
+      }
+    </div>
+  </form>
+</section>

@@ -1,0 +1,30 @@
+<section>
+  <app-info-box
+  class="info"
+  infoText="Selecciona el medio de transporte y rellena los campos."
+></app-info-box>
+
+    <p-dropdown
+    [options]="travelOptions"
+    [(ngModel)]="travelSelected"
+    optionLabel="label"
+    optionValue="value"
+    [style]="{ width:'100%', maxWidth: '375px'}">
+  </p-dropdown>
+
+     @if(travelSelected === 'car') {
+        <app-car-form></app-car-form>
+     }
+
+    @if(travelSelected === 'plane') {
+        <app-flights-form></app-flights-form>
+    }
+
+    @if(travelSelected === 'train') {
+        <app-rail-form></app-rail-form>
+    }
+
+    @if(travelSelected === 'bus') {
+        <app-bus-form></app-bus-form>
+    }
+</section>
