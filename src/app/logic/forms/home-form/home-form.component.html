@@ -1,0 +1,37 @@
+  <section>
+    <app-info-box
+    class="info"
+    infoText="Introduce los kilovatios hora que consumes en un mes."
+  ></app-info-box>
+
+    <section class="home-form">
+      <form class="form" [formGroup]="homeForm">
+        @for (option of homeOptions; track $index) {
+        <p-floatLabel>
+          <p-inputNumber
+            class="form-control"
+            [inputId]="option.name"
+            [formControlName]="option.name"
+            suffix=" kWh"
+          />
+          <label for="number-input">{{ option.label }}</label>
+        </p-floatLabel>
+        }
+
+        <div class="form__bottom">
+          <p-button
+          severity="secondary"
+          label="Calcular"
+          (click)="onSubmitHome()"
+        />
+          @if(homeCarbon){
+          <div class="bottom__result">
+            <h3 class="result__title">Resultado:</h3>
+            <p class="result__text">{{ homeCarbon }}{{ homeCarbonUnit }}</p>
+          </div>
+          }
+        </div>
+      </form>
+    </section>
+  </section>
+
