@@ -6,139 +6,27 @@
 .advices {
   padding: 16px;
 
-  .title {
-    font-size: 1.1rem;
+  .advices__title {
+    font-size: 1.3rem;
     margin-bottom: 6px;
   }
 
-  .subtitle {
-    font-size: 0.85rem;
+  .advices__subtitle {
+    font-size: 1rem;
   }
 
-  .grid {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-    margin-top: 24px;
-
-    .card {
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      background-color: var(--white);
-      border: 1px solid var(--lines);
-      border-radius: 16px;
-      min-height: 200px;
-      padding: 16px;
-
-      .card-text {
-        line-height: 24px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 12px;
-      }
-    }
-
-    .bg {
-      background-image: url("/assets/images/bg-card.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .bg-secondary{
-      border-radius: 16px;
-      border: 1px solid var(--secondary);
-     // background-color: var(--secondary);
-    }
-
-    .content {
-      border-radius: 16px;
-      padding: 24px;
-     background-image: url("/assets/images/bg-recycle.svg");
-     background-repeat: no-repeat;
-     background-size: cover;
-
-      .texts {
-
-        .title {
-          font-size: 1.3rem;
-          font-weight: 600;
-          color: var(--black);
-          margin-bottom: 8px;
-        }
-  
-        .text {
-          font-size: 0.9rem;
-          font-weight: 500;
-          color: var(--black);
-          line-height: 24px;
-        }
-      }
-      .img-container {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--secondary);
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
 }
 
 @media(min-width: 768px) {
   .advices {
     padding: 24px;
 
-    .title {
+    .advices__title {
       font-size: 1.3rem;
     }
 
-    .subtitle {
+    .advices__subtitle {
       font-size: 1rem;
-    }
-
-    .grid {
-      min-height: 465px;
-      grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
-
-.article-1 { grid-area: 1 / 1 / 2 / 2; }
-.article-2 { grid-area: 1 / 2 / 2 / 4; }
-.article-3 { grid-area: 1 / 4 / 2 / 5; }
-.article-4 { grid-area: 2 / 3 / 3 / 5; }
-.article-5 { grid-area: 2 / 1 / 3 / 3; }
-      // .article-1 {
-      //   grid-area: 1 / 1 / 3 / 2;
-      // }
-
-      // .article-2 {
-      //   grid-area: 3 / 1 / 6 / 2;
-      // }
-
-      // .article-3 {
-      //   grid-area: 1 / 2 / 3 / 4;
-      // }
-
-      // .article-4 {
-      //   grid-area: 4 / 2 / 6 / 4;
-      // }
-
-      // .article-5 {
-      //   grid-area: 1 / 4 / 6 / 5;
-      // }
-
     }
   }
 }
@@ -150,15 +38,12 @@ grid-template-rows: repeat(2, 1fr);
     max-width: 1200px;
     margin: 0 auto;
 
-    .title {
+    .advices__title {
       font-size: 1.75rem;
     }
 
-    .subtitle {
+    .advices__subtitle {
       font-size: 1.15rem;
     }
-
-
-
   }
 }

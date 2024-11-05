@@ -1,0 +1,29 @@
+<section class="grid">
+
+  <article class="grid__article grid__article--2 grid__card--bg-secondary">
+    <div class="grid__content">
+      <div class="grid__texts">
+        <h3 class="grid__title">Reduce, reutiliza, recicla</h3>
+        <p class="grid__text">
+          Adopta un enfoque responsable en tus compras: opta por productos
+          esenciales y evita el consumismo innecesario. Reutiliza objetos en
+          lugar de desecharlos, y participa en el reciclaje para reducir la
+          cantidad de residuos que generas. Pequeños cambios en tu día a día
+          pueden hacer una gran diferencia en la salud de nuestro planeta.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <article
+    *ngFor="let article of articlesGreen"
+    [ngClass]="'grid__article grid__article--' + article.id"
+  >
+    <app-did-you-know-card
+      [text]="article.text"
+      [image]="article.image"
+      [showTitle]="false"
+    ></app-did-you-know-card>
+  </article>
+
+</section>
