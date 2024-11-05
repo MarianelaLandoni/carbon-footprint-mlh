@@ -17,9 +17,7 @@ Calcula tu impacto en el planeta y toma el control de tu huella de carbono. Con 
 
 ## 🛠️ Tecnologías
 
-- **Framework**: [Angular 17](https://angular.io/) versión 17.3.9.
-- **Estilos**: [Sass](https://sass-lang.com/) para una mejor gestión de estilos
-- **Componentes UI**: [PrimeNG](https://www.primefaces.org/primeng/) para una amplia variedad de componentes
+- **Framework**: [Angular 17](https://angular.io/) versión 17.3.9 y [PrimeNG](https://www.primefaces.org/primeng/) para componentes básicos.
 - **Backend/API**: Integración con la versión gratuita de la API [Climatiq](https://www.climatiq.io/) para datos precisos
 - **Almacenamiento**: LocalStorage para gestionar los datos
 
