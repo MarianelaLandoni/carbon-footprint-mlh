@@ -44,7 +44,13 @@ La aplicación estará disponible en (http://localhost:4200)
 ## 🌱 Uso
 
 1. **Accede a Zero Impact y en Mediciones selecciona la categoría para calcular tu huella de carbono.**
+   ![image](https://github.com/user-attachments/assets/e5c199be-f85f-40ec-a955-2db9008c2859)
+   
 2. **Completa los formularios que te interesen con los datos solicitados (consumo eléctrico, distancia de vuelo, etc.)**
+   ![image](https://github.com/user-attachments/assets/d701f77c-b580-49e7-ad21-a3799579ecef)
+   
 3. **Consulta los resultados en el dashboard para ver tu impacto en CO₂.**
+   ![image](https://github.com/user-attachments/assets/f00fb8e9-298e-43b8-a51b-5fda73f8acde)
+
 4. **Visita la sección de consejos para obtener recomendaciones sobre cómo reducir tu huella de carbono.**
 
