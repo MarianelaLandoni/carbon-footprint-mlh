@@ -25,10 +25,12 @@
           label="Calcular"
           (click)="onSubmitFood()"
         />
+        @if(foodCarbon){
         <div class="bottom__result">
           <h3 class="result__title">Resultado:</h3>
           <p class="result__text">{{ foodCarbon }}{{ foodCarbonUnit }}</p>
         </div>
+        }
       </div>
     </form>
   </section>
